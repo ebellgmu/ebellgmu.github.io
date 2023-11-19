@@ -3,139 +3,638 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>Mini Assignment 2 </title>
+<title>Final Twine Narrative HIST 390</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 50%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0.25) 0%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Mini Assignment 2 .</tw-noscript></noscript></tw-story>
-<tw-storydata name="Mini Assignment 2 " startnode="1" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="994C720C-8266-448B-8278-22A1EA49ACEF" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="800,350" size="100,100">(text-colour:#d9480f)[&#39;&#39;Welcome to Tudor England!&#39;&#39;]  (text-colour:#fd7e14)[It is the mid-16th century and you are Anne of Cleves, on your way to meet King Henry VIII for the first time.  A peace treaty between France and the Holy Roman Empire has made Henry VIII uneasy and there is no better way to manage foreign affairs than get married… again..  ]
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Final Twine Narrative HIST 390.</tw-noscript></noscript></tw-story>
+<tw-storydata name="Final Twine Narrative HIST 390" startnode="1" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="CEF8CFF9-20BC-480B-8479-58DDC2A546DA" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Begin" tags="" position="1500,150" size="100,100">Welcome to Tudor England!  It is the 16th century and King Henry VIII has risen to power.  During his reign, Henry VIII transforms his country through various economic, political, and religious policies that forever change the future.  However, one of the most notable aspects of Henry VIII’s life is his unpredictable martial life influenced by his search for a male heir.  Catherine of Aragon, Anne Boleyn, Jane Seymour, Anne of Cleves, Catherine Howard, and Catherine Parr were all married to Henry at one point in time.  Although life as a queen might have seemed prestigious, these marriages ended in divorce, execution, or escape.
 
-[[Its time to reveal the woman behind the portrait]]
+&#39;&#39;Where do you factor into this story exactly?&#39;&#39;  
 
+You are about to embark on a thrilling adventure as a lady&#39;s maid to one of Henry VIII&#39;s six wives. As a maid, you will witness the extravagant lifestyles of the royal court, experience political intrigues and the scandalous innerworkings of Henry’s personal life.  Your choices will impact the course of Tudor history and potentially alter the fates of his wives, you must choose wisely.  Will you be loyal to your queen, or will you risk everything for selfish gain? The choice is yours in this exciting story.  
 
-
-&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/42/Portrait_Anne_of_Cleves_by_Hans_Holbein_the_Younger_%28Louvre%29.jpg&quot; alt=&quot;&quot; width=&quot;400&quot;&gt;
-
-</tw-passagedata><tw-passagedata pid="2" name="Its time to reveal the woman behind the portrait" tags="" position="800,475" size="100,100">(text-colour:#d9480f)[It is January of 1540 and you finally arrive on a cold winter day.  Henry VIII, previously enamored by your portrait painted by Hans Holbein, finds you repulsive and physically unattractive.  Even though the nickname of (text-colour:#e67700)[//“The Flanders mare”//] does not make you feel entirely welcome, Henry signed the treaty in 1539 and now he is stuck with you.  Do you…]
-
-[[Reluctantly stay with him]]
-
-[[Tell Henry VIII that you are too good for him]]
-</tw-passagedata><tw-passagedata pid="3" name="Tell Henry VIII that you are too good for him" tags="" position="675,600" size="100,100">(text-colour:#d9480f)[You tell Henry VIII that you do not need his shallow remarks and resist marriage.  Henry is not entirely disappointed that you left him but upset that you made a fool of him.  //However//, tensions are high with Catholics so beheading you might not be a great idea.  Should you escalate tensions with Henry VIII after his unflattering remarks or do you flee and inform fellow Catholics of his uncouth nature?]
-
-[[Warn others of the heretic]]
-
-[[Scold Henry for his shallow obsession with physical beauty]]
-
-&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Enrique_VIII_de_Inglaterra%2C_por_Hans_Holbein_el_Joven.jpg/640px-Enrique_VIII_de_Inglaterra%2C_por_Hans_Holbein_el_Joven.jpg&quot; alt=&quot;&quot; width=&quot;390&quot;&gt;
-
-(text-colour:#d9480f)[Henry is &#39;&#39;definitely&#39;&#39; not happy now.]
-</tw-passagedata><tw-passagedata pid="4" name="Reluctantly stay with him" tags="" position="925,600" size="100,100">(text-colour:#d9480f)[Even though Henry VIII is repulsed by you and you are insulted by his crude remarks, you decide that it is best to stay together for the sake of foreign affairs.  You marry Henry VIII and start getting acclimated to life in England.  The months following January are slightly uncomfortable to say the least.  You and Henry get along fine, but you still lack the physical beauty and high societal skills that Henry admires.  In order to make the situation more bearable, you try to finds ways to make yourself more appealing to the King.  You insist that your presence has values beyond strategic foreign policy so you…    ]
-
-[[Show Henry that you are cultured]]
-
-[[Try to bear him another son]]
+To start, what is your name as a lady’s maid?
 
 
-&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/f/f9/After_Hans_Holbein_the_Younger_-_Portrait_of_Henry_VIII_-_Google_Art_Project.jpg&quot; alt=&quot;&quot; width=&quot;390&quot;&gt;
+(text-colour:#faa2c1)[[Daphne Audley]]
 
-(text-colour:#d9480f)[(Henry thinks his portrait from Hans Holbein is better than yours)]</tw-passagedata><tw-passagedata pid="5" name="Warn others of the heretic" tags="" position="475,700" size="100,100">(text-colour:#d9480f)[Other powerful Catholics from France and The Holy Roman Empire see Henry as a heretic and decide to invade.  //Telling Anne of Cleves that she is ugly was not good for foreign affairs.//  Do you flee the situation before Henry can blame you and start a new life?
+(text-colour:#91a7ff)[[Isabelle Smith]]
+
+(text-colour:#69db7c)[[Jane Dowe]]
+
+(text-colour:#3bc9db)[[Mary Beddington]]
+
+(text-colour:#fa5252)[[Edith Dormer]]
+
+(text-colour:#ffa94d)[[Milly Billeigh]]
+
+
+
+</tw-passagedata><tw-passagedata pid="2" name="Daphne Audley" tags="" position="3850,250" size="100,100">(text-colour:#fcc2d7)[Daphne Audley was born on October 31, 1490, in St. Bartholomew&#39;s Hospital in Bristol, England. She was born to Benjamin Albert Audley, the Marquees of Bristol, and Edith Rupert Audley, the Marchioness of Bristol. 
+
+
+Benjamin was a stern man who expected a lot from Daphne. He expected her to marry well, be successful, and sire multiple heirs for her future husband. Edith wanted the best for Daphne, which is why Edith would secretly pay for Daphne&#39;s education with her family&#39;s inheritance- which Benjamin knew nothing about. Benjamin only looked at women as wombs to produce sons who would carry on the family name. 
+
+
+At the age of 19, Daphne became a lady&#39;s maid to the new Queen of England, Catherine of Aragon. Daphne&#39;s father feared she was getting too old and would become a spinster, much to his disdain. Benjamin convinced King Henry VIII to make his daughter useful at court so she could find a respectable man to marry.  In exchange, Henry would have access to Benjamin&#39;s finest ships in any upcoming battles. 
+
+ 
+Daphne was educated in secret. She received tutoring in languages such as Latin, French, and Italian. She was also educated in mathematics, science, and the arts. Daphne excelled in drawing and science, specifically medical science. 
+
+
+Daphne can be described as loyal, witty, cunning, and intelligent. ]
+
+
+(text-colour:#ffc078)[[Let&#39;s begin]]
+</tw-passagedata><tw-passagedata pid="3" name="Isabelle Smith" tags="" position="4675,150" size="100,100">(text-colour:#4c6ef5)[King Henry VIII and Queen Catherine Howard just got married. You are instructed to be the Queen&#39;s maid, and Catherine loves having you around. She trusts you the most out of everyone in the palace, and she has a deep endearment towards you. 
+
+You&#39;re still young and naive, wanting to accomplish everything the Queen asks you to do. You have become the most trusted person in the Queen&#39;s life, and she shares her every secret with you. You have slowly begun to understand the Queen and form a proper bond with her, taking an oath to never leave her side or betray her. 
+
+But slowly you get dragged into an affair that could mean the end of you and the end of the Queen.  Your decisions can dictate the fate of this chapter in history. ]
+
+(text-colour:#4dabf7)[[You Have the Queen&#39;s Trust]]</tw-passagedata><tw-passagedata pid="4" name="Jane Dowe" tags="" position="1975,475" size="100,100">(text-colour:#2f9e44)[In the early days of Anne Boleyn and King Henry VIII&#39;s relationship, you are still a young and inexperienced lady&#39;s maid, learning the ropes of court life. The King&#39;s infatuation with Anne is palpable, and the court is abuzz with gossip and intrigue. It has been rumored that she has gotten the king&#39;s attention and you feel as if you should warn her of the dangers in that regard. He is known for discarding his bed mates left and right. Your days are filled with the hustle and bustle of the Tudor court, and you find yourself at a crossroads, facing a momentous decision that will alter history. The fate of Anne Boleyn rests in your hands.]
+
+(text-colour:#2f9e44)[If you choose to] (text-colour:#b2f2bb)[[support Anne]] (text-colour:#2f9e44)[and King Henry&#39;s growing connection ]
+
+(text-colour:#2f9e44)[If you decide to] (text-colour:#b2f2bb)[[remain neutral]] (text-colour:#2f9e44)[and observe from the sidelines.] 
+
+
+&lt;a href=&quot;https://imgflip.com/i/858qio&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/858qio.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="support Anne" tags="" position="1850,650" size="100,100">(text-colour:#2f9e44)[You recognize the deepening bond between Anne and the King and decide to offer your support. As Anne&#39;s lady&#39;s maid, you help her prepare for her private meetings with Henry and ensure her appearance is always impeccable. Your loyalty to Anne further solidifies her position and influence. You decide where the next meeting for them is at. ]
+
+(text-colour:#b2f2bb)[[the library]]  
+
+(text-colour:#b2f2bb)[[the gardens]] 
+</tw-passagedata><tw-passagedata pid="6" name="remain neutral" tags="" position="2250,600" size="100,100">(text-colour:#2f9e44)[As her lady&#39;s maid, you witnessed Anne&#39;s rapid rise from obscurity to prominence. She was crowned Queen Anne Boleyn in 1533, and the coronation was a grand spectacle. Her marriage to King Henry would bear a daughter, Princess Elizabeth, who would become one of England&#39;s most iconic monarchs.]
+
+ 
+
+(after:6s)+(text-colour:#2f9e44)[However, the elation was short-lived. The failure to produce a male heir and increasing tensions in the court led to Anne&#39;s downfall. Her miscarriages, coupled with King Henry&#39;s roving eye, marked the beginning of the end.]
+
+ 
+
+(after:12s)+(text-colour:#2f9e44)[In 1536, the Queen was arrested on charges of adultery, incest, and treason.  As her loyal lady&#39;s maid, watched helplessly as Anne was tried and ultimately sentenced to death. Her execution marked a dark chapter in English history, and it had profound implications for the country.]
+
+(after:13s)[&lt;a href=&quot;https://imgflip.com/i/858r1m&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/858r1m.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="7" name="the library" tags="" position="1800,825" size="100,100">(text-colour:#2f9e44)[They meet in the library where you are able to keep watch just in case anyone approaches. It is here where the king promises to give Anne the divorce and makes a promise to marry her. As the couple embrace for joy you hear footsteps in the distance. &#39;&#39;What do you do?&#39;&#39; ]
+
+(text-colour:#b2f2bb)[[Warn the couple]] 
+
+(text-colour:#b2f2bb)[[Run before anyone catches you]]
+
+
+&lt;a href=&quot;https://imgflip.com/i/858rrr&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/858rrr.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="the gardens" tags="" position="2075,725" size="100,100">(text-colour:#2f9e44)[They met in the gardens while you kept looking out but before you knew it a hand was over your mouth and a knife at your throat. One of the queens guards has you trapped, unable to warn the loving couple who are entangled with one another about the on looker. The queen walks in and the lovers are caught. 
+
+In order to save his reputation the king claims you and Anne as witches sent to seduce him by the French. You are both sentenced to beheading. ]
+
+&lt;a href=&quot;https://imgflip.com/i/858rwm&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/858rwm.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Warn the couple" tags="" position="1750,1025" size="100,100">(text-colour:#2f9e44)[You warned the couple before helping Anne make an escape out of the library disguising yourself as someone needing the doctor. The king is surprised by your bravery and rewards you with a broach and promises to be a lady once Anne is made queen as long as you continue to help them sneak around. ]
+
+(text-colour:#2f9e44)[You say yes to] (text-colour:#b2f2bb)[[continuing to help them]] (text-colour:#2f9e44)[and Anne gives you a hug and a promise of friendship ]
+
+(text-colour:#2f9e44)[You] (text-colour:#b2f2bb)[[refuse to help them]] (text-colour:#2f9e44)[anymore because they have become reckless and hope they consider this your resignation. ]
+</tw-passagedata><tw-passagedata pid="10" name="Run before anyone catches you" tags="" position="2025,900" size="100,100">(text-colour:#2f9e44)[You run but Anne and the King hear the footsteps as well and are able to get away before getting caught. Anne sees your fear as a betrayal and the King gives her permission to banish you from the castle, stripped of your titles and forced to work as a prostitute. ]</tw-passagedata><tw-passagedata pid="11" name="continuing to help them" tags="" position="1775,1225" size="100,100">(text-colour:#2f9e44)[With the promises of a higher title you happily lend your help to the couple in hopes that you can help them be less reckless and hide their love until the king gets the Pope on board. Because of your loyalty the couple managed to deceive the court and the queen&#39;s suspicion till a divorce was granted. Frustrated, Henry initiated the English Reformation in the 1530s, breaking away from the Catholic Church, making himself the head of the Church of England, and marrying Anne Boleyn. Shortly after you were never given the title or the broach that was promised to you]
+
+(text-colour:#2f9e44)[You begin to have resentment and ask Queen Anne] (text-colour:#b2f2bb)[[“ When do you think I will be rewarded for my loyalty to your majesty?”]] 
+
+(text-colour:#2f9e44)[You know your time is coming and] (text-colour:#b2f2bb)[[continue to wait]]. (text-colour:#2f9e44)[However, resentment is continuing to build along with worry of the part you had to play in the separation of church and crown. 
+]</tw-passagedata><tw-passagedata pid="12" name="refuse to help them" tags="" position="2050,1125" size="100,100">(text-colour:#2f9e44)[Your refusal is seen as treason in the kings eye and he demands your head.]</tw-passagedata><tw-passagedata pid="13" name="“ When do you think I will be rewarded for my loyalty to your majesty?”" tags="" position="1600,1325" size="100,100">(text-colour:#2f9e44)[Your question spikes anger in the queen, “how dare you think I owe you anything. As your queen you should be happy that I have kept you at your station for you have no place waiting on a queen.” Later that night as you were sleeping the queens guard came into your room arresting you for treason and sending you to the tower. ]</tw-passagedata><tw-passagedata pid="14" name="continue to wait" tags="" position="2000,1325" size="100,100"> (text-colour:#2f9e44)[As you have waited patiently you continue to be inside Ann’s inner circle. The queen falls pregnant with her first baby and you have prayed over her hoping for a boy. One night you begin to hear screams coming from the queen&#39;s room… it is time
+ 
+Fate doesn&#39;t let you choose the gender click A or B to see what queen Anne Had.]
+
+(text-colour:#b2f2bb)[[A]]
+
+(text-colour:#b2f2bb)[[B]]
+</tw-passagedata><tw-passagedata pid="15" name="A" tags="" position="1800,1450" size="100,100">&#39;&#39;(text-colour:#fcc2d7)[It&#39;s a girl ]&#39;&#39;(text-colour:#2f9e44)[and history continues how it has been. Despite the depth of their love, Anne&#39;s failure to produce a male heir, combined with increasing court tensions, leads to her arrest and execution. You watch helplessly as Anne faces the charges brought against her. History follows its well-known path, with Anne&#39;s tragic end and the subsequent reign of her daughter, Queen Elizabeth I.]
+
+&lt;a href=&quot;https://imgflip.com/i/858sjp&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/858sjp.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="B" tags="" position="2150,1475" size="100,100">&#39;&#39;(text-colour:#99e9f2)[It’s a Boy. ]&#39;&#39;(text-colour:#2f9e44)[This has now confirmed that queen Anne was the rightful queen of england. You cry of joy along with the other queen lady’s maid. You decide to ]
+
+
+(text-colour:#b2f2bb)[[Ask Anne]] (text-colour:#2f9e44)[what the name of the baby boy is ]
+
+(text-colour:#2f9e44)[Run to get the king to] (text-colour:#b2f2bb)[[tell him the good news.]]
+
+&lt;a href=&quot;https://imgflip.com/i/858t07&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/858t07.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Ask Anne" tags="" position="1950,1600" size="100,100">(text-colour:#2f9e44)[Anne tells you that the name of the baby is (dropdown:bind $name1, &quot;Edward&quot; , &quot;Byron&quot; , &quot;Johnny J&quot;). The door opens up followed by the king and Lady Seymour looking flushed and excited over the news. I look at my queen to see if she notices but she is blinded by the love of her newborn]. 
+
+(text-colour:#b2f2bb)[[You let go of your suspicions]] 
+
+(text-colour:#2f9e44)[You] (text-colour:#b2f2bb)[[whisper to another lady&#39;s maid your suspicions,]] (text-colour:#2f9e44)[afraid you are seeing things. 
+]</tw-passagedata><tw-passagedata pid="18" name="tell him the good news." tags="" position="2375,1600" size="100,100">(text-colour:#2f9e44)[As you are running down the hall you do not notice the king&#39;s door is shut, you barge in without announcement and catch the king with lady Seymour. They are clearly entangled and the king is giving the same look he gave Anne the first time you saw them together. When they notice you at the door it is already too late. Their look out stabs you in the back before you can make a noise. Your last thought is that another divorce may be in the works and you hope that Anne can survive it. //At least she had a boy. //]</tw-passagedata><tw-passagedata pid="19" name="You let go of your suspicions" tags="" position="1800,1725" size="100,100">(text-colour:#2f9e44)[There are tournaments, fireworks, and a ball in honor of the king&#39;s new heir, $name1. However while Queen Anne continues to rest you notice that the king and Lady Seymour are getting closer and closer. Stealing looks from across the room and dancing when it came to any partner&#39;s songs.]
+
+(text-colour:#2f9e44)[You still ](text-colour:#b2f2bb)[[stay silent]] (text-colour:#2f9e44)[in hopes that you can protect the cluelessness of your queen. ]
+
+(text-colour:#2f9e44)[You] (text-colour:#b2f2bb)[[confront Lady Seymour]] </tw-passagedata><tw-passagedata pid="20" name="whisper to another lady&#39;s maid your suspicions," tags="" position="2150,1700" size="100,100">(text-colour:#2f9e44)[The lady&#39;s maid that you whispered to reports you for treason and the king beheads you.] </tw-passagedata><tw-passagedata pid="21" name="stay silent" tags="" position="1650,1850" size="100,100">(text-colour:#2f9e44)[You stay silent and when Queen Anne becomes all better she finds out from others that the king is having an affair when confronted with the question if you knew, you respond “Yes I saw something while you were on bed rest”. This upsets queen Anne to no end and she lashes out at you. She yells and tells you to leave and never return to the castle ground unless you want to be hanged. You leave knowing you no longer will be a part of history. 
+
+Anne eventually confronts the king and with that leads another war fro the king to divorce once again putting England through another world of turmoil. He tries to strip his son with Anne and make him illegitimate. Anne and her son go on the run and when he becomes old enough england enters another Civil War for 7 years eventually Jane Seymour&#39;s son ends up on top killing the Boleyn line for sure.  ]
+
+
+</tw-passagedata><tw-passagedata pid="22" name="confront Lady Seymour" tags="" position="2025,1825" size="100,100">(text-colour:#2f9e44)[Lady Seymour hears you out and decides to leave court in hopes to break the trance she and the king are in because it is not right. The king is upset but decides to put all his attention on raising the next great monarch. Queen Anne never found out. Anne&#39;s reign is marked by wisdom and reforms. Her marriage to the King remains strong, and you continue to serve her faithfully. In time, she reestablishes relations with the Catholic Church, avoiding the religious turmoil that will come to define Henry&#39;s reign. Under her guidance, England experiences an era of remarkable prosperity. The nation becomes a center of art, culture, and diplomacy. Her legacy as a wise and just ruler endures for generations to come.]</tw-passagedata><tw-passagedata pid="23" name="Edith Dormer" tags="" position="1125,325" size="100,100">(text-colour:#fa5252)[You are Edith Dormer from Exeter, born in 1520 to Catherine and William Dormer.  You are gentle, mild-mannered, and creative.  When Edith was almost twenty years old, her father proposed that she should take an important position.  Mr. Dormer was a distant associate of a German Duke who was sending his sister to England and she needed a lady’s maid.  After accepting this prestigious position, you find out that you will be helping] (text-colour:#e03131)[&#39;&#39;Anne of Cleves&#39;&#39;!  ]
+
+(text-colour:#fa5252)[When you arrive and greet Anne of Cleves, it is a cold January afternoon in 1540.  You greet her and exchange pleasantries about her time traveling to England.  You are aware of how enchanted Henry VIII was based on Anne’s portrait by Hans Holbein and you are excited to introduce them.  As Henry VIII awaits the arrival of his new bride, you and Anne make your way to greet the king.]
+
+(text-colour:orange)[[Time for Henry to meet the woman behind the portrait!]]
+               
+
+&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Portrait_Anne_of_Cleves_by_Hans_Holbein_the_Younger_%28Louvre%29.jpg/640px-Portrait_Anne_of_Cleves_by_Hans_Holbein_the_Younger_%28Louvre%29.jpg&quot; alt=&quot;&quot; width=&quot;400&quot;&gt;</tw-passagedata><tw-passagedata pid="24" name="Time for Henry to meet the woman behind the portrait!" tags="" position="1100,500" size="100,100">(text-colour:#fa5252)[Expectations are high as you introduce Anne of Cleves to Henry VIII.
+
+(after:4s)[Things &#39;&#39;do not &#39;&#39;go well to say the least.]
+
+(after:8s)[Henry VIII, who was initially captivated by Holbein’s portrait, is now immensely disgusted.  Henry protests that the physical beauty of Anne of Cleves does not match the portrait.  He is thoroughly repulsed by how physically unattractive he finds Anne and even calls her “The Flanders Mare” a few times.  Henry might have signed the treaty in 1539 because he needed to manage foreign affairs, but he feels truly deceived.  A peace treaty between France and the Holy Roman Empire made him feel uneasy, but now he feels utterly duped.  //Cromwell will certainly be executed for this.//  However, he is stuck with Anne now.
+
+You are// not// necessarily pleased with how their marriage has started, but you know that it is not wise to protest.  Do you…
+
+(text-colour:orange)[[Reassure Anne]] that she is beautiful and worthy, stating that the King must be in shock
+
+Advise Anne to (text-colour:orange)[[ask for a divorce]] against your better judgment]]
+</tw-passagedata><tw-passagedata pid="25" name="Reassure Anne" tags="" position="925,575" size="100,100">(text-colour:#fa5252)[You reassure Anne that she has beauty and grace, Henry VIII is probably just in shock.  It is now February and things seem to be going relatively well.  As Henry eats a turkey drumstick, you often overhear him lament about how ugly he thinks Anne is.  Anne of Cleves is a gentle soul, but you can tell that his crude remarks often weigh on her.  However, Anne and Henry decide that it is best to stay together for the sake of foreign affairs.  As the months progress, it is now March and Anne is getting acclimated to life in England.  Anne and Henry get along fine on a personal level, but she still lacks the beauty and high societal skills that Henry admires.
+
+Observing this dynamic from afar you…
+
+(text-colour:orange)[[Let their marriage continue]]  
+
+(text-colour:orange)[[Ask Henry how you can help]] make things better
+]</tw-passagedata><tw-passagedata pid="26" name="ask for a divorce" tags="" position="1300,650" size="100,100">(text-colour:#fa5252)[You know your place in the royal court, but you do not feel right letting Anne of Cleves stay married to this man.  Such shallow remarks should not be cast upon such a virtuous and docile young woman.  You find Anne in her chamber one afternoon in February and tell her that she should ask for a divorce from Henry.  While the idea is bold, Anne has her status on her side.  If Henry VIII attempted to marry her to manage foreign affairs, and then beheaded her, Catholics could turn on him.
+
+Anne asks for a divorce the next morning, and Henry VIII is bewildered.  Even though he wouldn’t mind finding a way to get rid of Anne, this marriage is politically significant.  Henry declines her request and states that further inquiry would be unwise.  //Once again, you are not entirely satisfied with the course of events//.  Do you choose to..]
+
+(text-colour:orange)[[Push further for a divorce]]
+
+(text-colour:orange)[[Let their marriage continue]]  
+
+&lt;a href=&quot;https://imgflip.com/i/859pur&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/859pur.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="27" name="Push further for a divorce" tags="" position="1525,650" size="100,100">(text-colour:#fa5252)[You truly feel guilty because you were sent to help a young queen and now you have meddled past the point of no return.  Still, you are invested in this young woman’s future.  You venture back into Anne of Cleves’ chamber one night and encourage her to pressure Henry for freedom.  The door is slightly ajar and one of Henry’s guards hears you from outside.  As Anne explains that she has accepted her fate for better or worse, Henry’s guard informs him of your wrongdoings.
+
+The next morning, you are accused of (dropdown:bind $name2, &quot;Treason&quot; , &quot;Unproven Adultery&quot; , &quot;Theft&quot; , &quot;Being 20 and not interested in Henry&quot;) and ordered to be beheaded.  Henry VIII has seemingly found the source of tension with Anne and seeks to eliminate it altogether.]
+
+(text-colour:#fa5252)+(after:8s)[Do you (text-colour:orange)[[try to flee]] or do you try to (text-colour:orange)[[explain yourself]]?]
+</tw-passagedata><tw-passagedata pid="28" name="Let their marriage continue" tags="" position="1050,775" size="100,100">(text-colour:#fa5252)[You decide to let Henry VIII and Anne of Cleves be, allowing them to work out their personal problems as time goes on.  Henry often complains that she is so unattractive, it complicates their private life.  You prefer to think that beauty lies in the eye of the beholder, so his vision must be impaired.  Anne lacks a higher education, but can read and write in German.  She also has domestic skills, but does not play a musical instrument or have prestigious talents.  The royal marriage seems stagnant, so you decide to offer advice to Anne.    
+
+Tell her that (text-colour:orange)[[another portrait]] could endear her to Henry once again
+
+Tell her that she could (text-colour:orange)[[prove her worth by bearing him a son]]
+
+Tell her to (text-colour:orange)[[stay kind and genuine]], perhaps her personality will win him over in the end]
+</tw-passagedata><tw-passagedata pid="29" name="try to flee" tags="" position="1400,825" size="100,100">(text-colour:#fa5252)[You attempt to flee but you are intercepted and taken into custody.  As you await your impending doom, you think that you should have stayed out of their business.  The following week you are charged with $name2, Henry even dragged in a few unknown peasants to make it look like your crime was premeditated.  You are beheaded for $name2 along with three other peasants.
+
+(after:9s)[&#39;&#39;Edith should have handled the situation differently.&#39;&#39;]]
+
+&lt;a href=&quot;https://imgflip.com/i/859st9&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/859st9.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="explain yourself" tags="" position="1625,800" size="100,100">(text-colour:#fa5252)[Before you are whisked away, you try to explain your intentions to Henry.  Your negative intervention makes Henry VIII furious and he will not grant you any mercy.  Even when Anne pleads for your innocence, you know that it will not work.  You know that you will be accused of $name2 as you are dragged into custody.  Knowing that you face a certain death, you (text-colour:orange)[[try to flee]].]</tw-passagedata><tw-passagedata pid="31" name="Ask Henry how you can help" tags="" position="775,750" size="100,100">(text-colour:#fa5252)[One day, you get a chance to talk to Henry VIII personally.  You tell him that you notice things are not going great with Anne and ask if there’s anything you can do to help.  &#39;&#39;//An unfulfilled Henry makes an offer to you//&#39;&#39;:
+
+(after:8s)[You could be his side mistress while he is married to Anne.  That way, Anne doesn’t have to be constantly remined she is “The Flanders Mare” and Henry feels fulfilled.  While this is not an easy decision, you must choose.
+
+(text-colour:orange)[[Become Henry’s secret mistress]]
+
+(text-colour:orange)[[Reject his offer and go tell Anne about this mischief!]]
+
+&lt;a href=&quot;https://imgflip.com/i/859v3o&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/859v3o.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;]]</tw-passagedata><tw-passagedata pid="32" name="Reject his offer and go tell Anne about this mischief!" tags="" position="775,925" size="100,100">(text-colour:#fa5252)[You are disgusted at his offer and believe that Anne should leave him once and for all.  You quickly run to go tell Anne but Henry VIII will not risk his foreign affairs for a lowly maid.  You are caught by guards and are accused of (dropdown:bind $name2, &quot;Treason&quot; , &quot;Unproven Adultery&quot; , &quot;Theft&quot; , &quot;Being 20 and not interested in Henry&quot;).  You will be beheaded in one week.  Do you (text-colour:orange)[[try to flee]] as it is the only way your life can be saved now?]</tw-passagedata><tw-passagedata pid="33" name="Become Henry’s secret mistress" tags="" position="600,800" size="100,100">(text-colour:#fa5252)[Why would you want to do that?!  
+
+(after:2s)[That is beyond uncharacteristic of you, a terrible decision!]
+
+(after:4s)[Your relationship is fleeting and only lasts until May of 1540 when you two are discovered by Anne.  To avoid embarrassment, Henry VIII orders your execution and you are locked away until the time of your beheading.  Good intentions took a wrong turn and you feel immense guilt as you pass by Anne on your way out.  You lost your freedom, dignity, friend, and soon your head.]]
+
+(text-colour:#fd7e14)[(after:9s)[&#39;&#39;That was not a good idea for Edith&#39;&#39;.]]
+</tw-passagedata><tw-passagedata pid="34" name="another portrait" tags="" position="875,1050" size="100,100">(text-colour:#fa5252)[You tell Anne of Cleves that she should try to commission another portrait.  Maybe that would breathe some life back into Henry.  In May of 1940, you get Thomas Cromwell to commission another portrait from Hans Holbein.  You think it is gorgeous and you tell that to Anne.  It is now time to (text-colour:orange)[[show this new painting to Henry!]]  ]
+
+&lt;a href=&quot;https://imgflip.com/i/85a0bd&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/85a0bd.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="prove her worth by bearing him a son" tags="" position="1275,975" size="100,100">(text-colour:#fa5252)[You tell Anne that she should try bearing Henry VIII a son, surely that would make Henry idolize her forever.  She takes your advice, and through eavesdropping, you learn that things didn’t go well.  Anne seems too naïve and Henry is “just too disgusted” as he puts it.  This seems to put a bigger strain on things.  Do you…
+
+(text-colour:orange)[[Insist that they should try again]]
+
+Or stay out of things and (text-colour:orange)[[Let their marriage continue]]    
 ]
-[[Attempt to flee]] escorted by a young man named.. (dropdown:bind $name4, &quot;William&quot; , &quot;Thomas&quot; , &quot;Matthew&quot; , &quot;James&quot;)</tw-passagedata><tw-passagedata pid="6" name="Scold Henry for his shallow obsession with physical beauty" tags="" position="675,725" size="100,100">(text-colour:#d9480f)[You scold Henry VIII for being a boorish fool.  The following morning, he accuses you of unjustified adultery and you are set to be beheaded (text-style:&quot;underline&quot;)[next week.  ]Do you.. ]
 
-[[Beg for a second chance]]
+&lt;a href=&quot;https://imgflip.com/i/859yw9&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/859yw9.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="stay kind and genuine" tags="" position="1100,1050" size="100,100">(text-colour:#fa5252)[You tell Anne to stay kind and genuine and she does.  Although Henry is not attracted to her physically, he finds that she has become a close friend.  He learns to appreciate her few talents and she takes a liking to playing card games with the King.  As Henry VIII manages an edgy political position, he grows closer to Queen Anne of Cleves in a platonic way.  The months carry on and before you know it, the beginning of June is almost here.  
 
-[[Attempt to escape]]
-</tw-passagedata><tw-passagedata pid="7" name="Beg for a second chance" tags="" position="475,875" size="100,100">(text-colour:#d9480f)[&#39;&#39;That didn’t work. &#39;&#39;]
+You take a backseat and simply observe their relationship from a maid’s perspective.  You have suspicions that Henry may be involved with a promiscuous Catherine Howard, but your suspicions haven’t been validated yet.  Even if that was true, at least he is treating Anne relatively better.  Do you try to secure Anne’s superior status over this Catherine by recommending the creation of (text-colour:orange)[[another portrait]], a (text-colour:orange)[[makeover]], or do you (text-colour:orange)[[stay out of their affairs?]]    ]   
+</tw-passagedata><tw-passagedata pid="37" name="Insist that they should try again" tags="" position="1450,975" size="100,100">(text-colour:#fa5252)[You insist that they should try again and… IT WORKS!?  From April onward, Anne is elevated in Henry’s opinion and you spend your time taking care of Anne.  If the child is a son, they are thinking of naming him (dropdown:bind $name3, &quot;Henry obviously&quot; , &quot;William per your suggestion&quot; , &quot;Edward 2.0&quot; , &quot;Thomas&quot; , &quot;James&quot;).  If the child is a girl, Henry doesn’t care.  You (text-colour:orange)[[continue taking care of Anne of Cleves]] through the fall season.]</tw-passagedata><tw-passagedata pid="38" name="continue taking care of Anne of Cleves" tags="" position="1450,1100" size="100,100">(text-colour:#fa5252)[Unfortunately, Anne has a miscarriage in early October and $name3 is lost.  Anne is divorced and you are dismissed.  You tried to make things better, but they did not work out for the best.  ]&#39;&#39;//(text-colour:#fd7e14)[Henry VIII is now with Catherine Howard.]//&#39;&#39;</tw-passagedata><tw-passagedata pid="39" name="show this new painting to Henry!" tags="" position="875,1175" size="100,100">(text-colour:#fa5252)[Henry sees the new painting.
 
-(after:3s)[Henry might have let you go eventually due to how ugly he thought you were, but now you meet the same fate as the first two wives. You are beheaded in 1540.] </tw-passagedata><tw-passagedata pid="8" name="Attempt to flee" tags="" position="700,875" size="100,100">(text-colour:#d9480f)[You attempt to flee but you are caught anyway.]
+(after:3s)[He loves it.]
 
-(after:3s)[You are charged for treason with some additional unjustified counts of adultery.]
+(after:6s)[But he reassures you that the Anne standing in front of him looks like the Flanders mare and not that goddess in the artwork.]
 
-(after:6s)[You are beheaded in addition to $name4 and two other young men who are randomly accused.]</tw-passagedata><tw-passagedata pid="9" name="Show Henry that you are cultured" tags="" position="1125,575" size="100,100">(text-colour:#d9480f)[You decide to show Henry VIII that you are cultured.  You lack a higher education, but you can read and write in German.  You also try to show the King some of your other domestic traits such as needlework.  However, you lack musical, artistic, or poetic talent.   
+(after:10s)[(text-colour:#fab005)[//At least you can say that you tried//].]
+]</tw-passagedata><tw-passagedata pid="40" name="stay out of their affairs?" tags="" position="1075,1200" size="100,100">(text-colour:#fa5252)[You stay out of their relationship and it develops nicely.  By July of 1540, foreign affairs have shifted and Henry VIII does not have to abide by the treaty any more.  It has been over five months since January and you have been trying to make things work for the both of them.  Henry VIII decides to divorce Anne of Cleves based on the grounds that their marriage is non-consummated.  You think that this could also be influenced by the growing presence of Catherine Howard.  Nonetheless, Anne will finally be free from Henry, escaping unscathed unlike so many others.  You are sent back home as you are (text-colour:orange)[[relieved from your royal duties]].   ]</tw-passagedata><tw-passagedata pid="41" name="relieved from your royal duties" tags="" position="1325,1425" size="100,100">(text-colour:#fa5252)[When you get home, you finally have some time to reflect on your time with Anne.  Plus, you hear about some royal news.
 
-Henry is still generally appalled by you and finds your lack of sophistication and physical attractiveness to be subpar.  (text-style:&quot;underline&quot;)[(He tells you as he sits there and eats a turkey drumstick).]  All you have is an important tie to your brother the duke and your gentle, well-mannered personality.]
+(after:4s)[Anne of Cleves was married to Henry VIII from January of 1540 until July.  Even though he did not find her attractive, he appreciated her mild manner and gentle nature.  Relieved that the treaty was no longer relevant, Henry gifted Anne a generous fortune in addition to some land.  As Henry’s political and personal problems continued, they stayed in touch from time to time with friendly respect for one another.  Catherine Howard became queen, but was beheaded eventually.]  
 
-[[Give up on flattering Henry and wait it out]]
+(after:10s)[(text-colour:#fab005)[&#39;&#39;Congratulations! &#39;&#39;//You have reached the true historical ending for Anne of Cleves//.]]
 
-[[Commission a new painting to make you look even better]] </tw-passagedata><tw-passagedata pid="10" name="Try to bear him another son" tags="" position="875,775" size="100,100">(text-colour:#d9480f)[You insist that you can add value by giving Henry another heir, in case his son Edward meets an untimely fate.  Henry VIII is &#39;&#39;disgusted&#39;&#39; by the thought and //does not want// &#39;&#39;anything&#39;&#39; //to do with you in such a way//.  Even though the feeling is mutual, you insist that it could be a good idea.  Do you both acknowledge that you’re physically disgusted by one another or try anyway?  
+(after:13s)[(text-colour:#fd7e14)[Should you go back and make different decisions as Edith or (text-colour:#fab005)[[Begin]] again?]]  ] 
+</tw-passagedata><tw-passagedata pid="42" name="makeover" tags="" position="1250,1225" size="100,100">(text-colour:#fa5252)[You do not tell Anne of Cleves that she should be suspicious of a mistress, you just recommend a makeover.  You attempt to find new clothing for her, but oddly-cut dresses and disc-shaped hats are considered high fashion.  You try to have her “let her hair down”, but that is also frowned upon fashion.  You rely on old Tudor methods of beautification and makeup to accent her facial features.  Both Anne and you feel confident about this makeover so you decide to show Henry.
+
+(after:9s)[(Un)surprisingly, Henry is appalled.  You made her even worse somehow!  Will anyone ever give Edith credit for being so inventive?  Maybe Anne should just (text-colour:orange)[[stay kind and genuine]] ]
+
+
+
+&lt;a href=&quot;https://imgflip.com/i/85a3kv&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/85a3kv.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="43" name="Let&#39;s begin" tags="" position="3725,425" size="100,100">(text-colour:#fcc2d7)[It is not exactly news that the King and Queen have had a tumultuous marriage. At the beginning of the relationship, they acted like lovesick teenagers who were falling in love for the first time. There were open displays of affection and grand gestures from both sides. 
+
+ 
+However, as we all know, good things do not last forever. Catherine losing so many babies and Henry&#39;s desire for an heir made him look elsewhere. He began his multiple affairs with women all over the court. Henry was never one for discretion, flaunting his lovers all over the castle, disregarding how Catherine may feel. 
+
+
+A part of Catherine knew that Henry would have mistresses, and another part of her prayed that he never would. As many times as Catherine turned the other cheek to his affairs, it had recently gotten worse than usual. With having children out of wedlock and the potential marriage to another woman. Catherine was set on being Queen for as long as she would live. ]
+
+
+(text-colour:#ffc078)[[Dressing The Queen]]
+</tw-passagedata><tw-passagedata pid="44" name="Dressing The Queen" tags="" position="3975,575" size="100,100">(text-colour:#faa2c1)[As Catherine&#39;s superior lady-in-waiting, you are the one who dresses the Queen every morning. You help Catherine adorn bejeweled, colorful gowns and gems from all over the world. Not being an entirely vain woman, Catherine still loves being able to dress well and provide a proper image of the Queen of England. 
+
+However, it is evident in the Queen&#39;s demeanor that she is sorrowful. With the hunch in her shoulders and the bags under her eyes from the lack of sleep from the previous night, Catherine is in no shape to present the perfect image. 
+
+You, not being able to ignore the look of utter pain in your Queen and friend&#39;s eyes, pries and questions what is wrong. Catherine, having to keep her sadness and loneliness to herself for such a long while, spills out the truth of her suffering: how losing the babies and Henry&#39;s affairs is no longer bearable. 
+
+Although you are a subject of the King, your loyalty lies with Catherine. The lady-in-waiting proposes the idea of perhaps getting revenge on the King.
+
+Taken aback, Catherine is speechless. Remaining calm and composed, the Queen informs her that such an act is treasonous. 
+
+Nonetheless, Catherine thinks to herself that it may not be such a bad idea after all. ]
+
+(text-colour:#ffc078)[[Should Catherine Get Revenge on Henry?]]
+</tw-passagedata><tw-passagedata pid="45" name="Should Catherine Get Revenge on Henry?" tags="" position="3850,700" size="100,100">(text-colour:#f783ac)[Catherine has been brainstorming ideas on how to get revenge on the King. However, is it just her thoughts running wild, or is she really going to do it? ]
+
+
+(text-colour:#ffc078)[[Catherine&#39;s Thoughts Run Wild]]
+
+(text-colour:#ffc078)[[Revenge Is Oh-So-Sweet]] 
+
+&lt;a href=&quot;https://imgflip.com/i/85qfdk&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/85qfdk.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="Catherine&#39;s Thoughts Run Wild" tags="" position="3650,875" size="100,100">(text-colour:#f783ac)[Catherine comes to her senses and is aware that she cannot kill her husband. For one, Henry is her King, and that would be treason. Second, Catherine loves Henry with all of her heart. 
+
+For Henry, Catherine’s love for him is not enough. He needs a male heir to secure the throne and stay within the Tudor family. What Henry fails to acknowledge, as most men do around this time, is women make exceptional rulers, perhaps even better than men. 
+
+Men rule not with their heads but with their sexual desires, ego, and pride. Women, on the other hand, do not have the same luxury as they are held to a much higher standard. If the King lets go of the idea of only a male sitting on the throne, Catherine and Henry can mold Mary into a fine ruler that the world will remember. 
+
+Alas, how often do we get what we want? ]
+
+
+(text-colour:#ffc078)[[From Palace to Convent?]]
+</tw-passagedata><tw-passagedata pid="47" name="Revenge Is Oh-So-Sweet" tags="" position="4025,875" size="100,100">(text-colour:#e64980)[Henry is able to do as he pleases. If he wants to have multiple mistresses at one time, he will. If he wants to flirt with women in front of his wife, he does. If he wants to blame Catherine for the son she was never able to give him, she would not hear the end of it. If he wants to humiliate or degrade her in any way, there was no stopping him. 
+
+Catherine puts up with too much. So, isn’t she justifiable in wanting to get revenge on the King?]
+
+
+(text-colour:#ffc078)[[Yes]]
+
+(text-colour:#ffc078)[[No]]
+
+
+</tw-passagedata><tw-passagedata pid="48" name="From Palace to Convent?" tags="" position="3625,1050" size="100,100">(text-colour:#f06595)[Henry, giving into his sexual desires and taking up multiple mistresses, ends up conceiving a boy with Bessie, Catherine’s lady-in-waiting. 
+
+
+This situation makes Catherine’s life much worse. Henry blames not being able to conceive a son at all or one that lives long enough to rule, on Catherine. As if somehow she decides the baby&#39;s gender beforehand or whether they live long enough or not. 
+
+
+Henry being, well, Henry has it in his head that God is punishing him for marrying the widow of his late brother, Arthur. Even though Catherine made it abundantly clear that she and Arthur did not consummate their marriage as he was too sick to. The King, refusing to see reason, is set in his crooked ideas. 
+He deems the marriage incestuous, and that is why God is not giving him a son. They were married for 24 years, why is the incestuous business just coming up now? Henry had no problem bedding Arthur’s wife after he died. 
+
+
+In comes Anne Boleyn, the bane of yours and the Queen’s existence. Anne feels that she is too good to simply be the King’s mistress, she must be his wife. Henry, only thinking with lust on his mind, decides that Anne is right and he needs to annul his marriage to Catherine. Henry is aware that Catherine has been a dutiful wife thus far, so she will agree to the annulment. Boy, is he wrong. 
+
+
+Catherine is royalty in her own right. There is no way that she is giving up being the Queen of England. 
+
+
+Henry is filled with infatuation for Anne, so he goes to Thomas Wolsey to figure out a way to divorce Catherine. However, Wolsey’s hands are tied as it is above his pay grade.  Henry, who reeks of desperation, goes to Pope Clement VII and basically begs for an annulment. The thing is, Catherine is the aunt of the Holy Roman Emporer and the King of Spain who will not take lightly the removal of his aunt. As well, divorce is frowned upon in Catholicism. 
+
+
+The King, throwing nothing short of a temper tantrum, settles on the idea of separating from the Roman Church. Instead, he creates the Church of England, which he happens to be the head of. Bringing Protestantism to England and allowing divorce. 
+
+
+Finally, Henry is able to do as he pleases in annulling his marriage after years of struggle, when he literally could have been doing anything else. 
+
+
+Henry’s marriage to Catherine is annulled in 1533. Henry illegitimizes Mary and forbids his daughter and Catherine from communicating with one another. The King tries his damndest to send Catherine to a convent, but she is not having any of that. So, she is sent to awful castles without her normal luxuries- servants, ladies-in-waiting, jewelry, practically every joy she ever had is stripped away from her. ]
+
+&lt;a href=&quot;https://imgflip.com/i/85qccl&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/85qccl.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="49" name="Yes" tags="" position="3875,1000" size="100,100">(text-colour:#fa5252)[Good choice. What is the best way to make him pay for what he has done?]
+
+(text-colour:#ffc078)[[Foe Or Friend?]]
+</tw-passagedata><tw-passagedata pid="50" name="No" tags="" position="4175,1000" size="100,100">(text-colour:#e64980)[Why are you the way that you are? Go back and choose yes. My goodness. ]
+
+&lt;a href=&quot;https://imgflip.com/i/85qc4x&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/85qc4x.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="Foe Or Friend?" tags="" position="3875,1175" size="100,100">(text-colour:#e64980)[Catherine confides in you about wanting to kill the King. Catherine is a proud woman, so letting you know takes a shot at her ego. However, the Queen is a smart woman and knows that she is not able to complete this mission on her own. 
+
+
+Catherine is fully aware that your loyalty lies with her, but just incase you decide to wander off in your alliances she tells you very candidly that she will burn you at the stake like some sort of heretic. Henry is fond of beheading as it is quick and easy. Catherine is as intelligent as cunning so she will make you pay in the most painful and lengthy way if you even think about straying. ]
+
+
+(text-colour:#fa5252)[Valuing your life, you decide that your allegiance is with your Queen and only her. ]
+
+
+
+&lt;a href=&quot;https://imgflip.com/i/85qdfp&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/85qdfp.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;
+
+
+(text-colour:#ffc078)[[What Will Be The King&#39;s Downfall?]] </tw-passagedata><tw-passagedata pid="52" name="What Will Be The King&#39;s Downfall?" tags="" position="3875,1300" size="100,100">(text-colour:#e03131)[Now it is time to plan the King&#39;s demise. ]
+
+(text-colour:#ffc078)[[Death]]
+
+(text-colour:#ffc078)[[Suffering]]
+
+(text-colour:#ffc078)[[Backstabbing]]
+
+&lt;a href=&quot;https://imgflip.com/i/85qbf0&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/85qbf0.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="Death" tags="" position="3575,1400" size="100,100">(text-colour:#e03131)[Ahh death…the best way to get rid of someone once and for all. Is it treasonous? Yes, absolutely. But is it going to be fun? Most certainly. 
+
+You and Catherine think of ideas on the best way to kill the King. It can’t be messy. It can’t lead back to either of you. //But it does have to cause agony.//  
+
+That being said, outside resources are not an option as the less people that know the better. 
+
+Stabbing him would be too messy with blood everywhere. Henry’s a big man, so the chances of being overpowered are high. 
+
+Suffocating him with his pillow–although incredibly tempting–may lead back to the Queen as Henry has guards stationed outside of his bedroom and if they barge in, they will know who the killer is. 
+
+Poison, yes that is the one. Poisoning his food is not an option as the King has a tester, but poisoning his clothes would check all the boxes of not being messy, not leading back to either of you, and it most definitely causes agony. ]
+
+
+(text-colour:#ffc078)[[Let The Death Commence]]
+</tw-passagedata><tw-passagedata pid="54" name="Suffering" tags="" position="3850,1450" size="100,100">(text-colour:#e03131)[Henry causes pain and heartache to those around him. He never apologizes or makes up for his behavior. He is who he has always been- a miserable man who causes nothing but agony for others. It is time that he has a taste of his own medicine. ]
+
+(text-colour:#ffc078)[[Break Her Heart, I Will Break Yours]]
+</tw-passagedata><tw-passagedata pid="55" name="Backstabbing" tags="" position="4150,1400" size="100,100">(text-colour:#e03131)[Creating Judas.]
+
+(text-colour:#ffc078)[[Your Lapdog Is Now Mine]]
+
+</tw-passagedata><tw-passagedata pid="56" name="Let The Death Commence" tags="" position="3575,1525" size="100,100">(text-colour:#c92a2a)[You are able to purchase hemlock from the local medicinal shop. With your interest in medical science, you are able to concoct a hemlock oil that can be poured inside Henry’s clothing. 
+
+Catherine, wearing a long, black gown, makes her way to Henry’s bedchambers. She is rudely stopped by guards who inform her that the King is not in. Catherine, being the Queen, demands entrance into his rooms as he is her husband, and she has been sent to collect a letter for the King. The guards relent and allow Catherine entrance. 
+
+Cathine pulls the plague mask from under her gown and adorns her gloves to prevent getting poisoned. She picks Henry’s most tacky outfit that she knows for sure he will choose for dinner with the Italians. Ever so gently, Catherine spreads the oil inside of his shirt, pants, coat, undergarments, socks, shoes, and hat. Once the task is complete, she removes the mask and pockets her gloves inside a cotton bag. As quick as Catherine is in, she is out, but not before grabbing a random letter off of the King’s desk to show the guards that she, in fact, retrieved the letter. 
+
+Hours after Catherine has poisoned Henry’s clothing, the King calls her into his room. Needing to impress the Italians, Henry questions Catherine on what he should wear for dinner. Catherine suggests his black coat and normal attire under it. Knowing her husband well, Catherine knows he won’t agree to it.
+
+“Nonsense,” Henry exclaims. “I must wear my best silks.” Henry adorns the clothing that Catherine laced with poison, but not soon after, he is screaming in pain. The blisters forming on his body. Catherine, being the dutiful wife that she is, runs to her husband&#39;s side– making sure not to touch him without gloves– and is in hysterics, calling for the guards and for help. She tells one of the guards to call for the palace physician while the King thrashes in pain. 
+
+The physician comes to the conclusion that the King has been poisoned. Catherine crying and begging for the doctor to do something. However, since it is hemlock, the chances of Henry surviving are low. 
+
+Speculation begins as to who would harm the King. All evidence leads back to the Italians, where one of the guards coincidently has Hemlock oil in his pocket. 
+
+Never getting out that it was you who slipped the oil into his pocket.
+
+Unfortunately, King Henry dies hours after being poisoned. 
+
+Since Mary is not old enough to rule the country, Catherine will do it in her stead. 
+
+And so Queen Catherine of Aragon rules England. Long may she reign. ]
+
+</tw-passagedata><tw-passagedata pid="57" name="Break Her Heart, I Will Break Yours" tags="" position="3850,1575" size="100,100">(text-colour:#c92a2a)[All of court knows Henry FitzRoy, the King’s beloved son conceived with his mistress. Henry loves his son more than Mary simply because he is a boy. It does not matter that Mary is his firstborn, that she excels in her education, or that she is proficient in multiple instruments. Henry will always love her less because she is a girl. 
+
+Mary goes out of her way to pick flowers for her father, insists on spending time with him, and really anything that may grant her Henry’s attention. The King refuses to acknowledge Mary’s affection or give any back. 
+
+Seeing Mary’s sadness caused by her father’s rejection breaks your heart. 
+
+You play a crucial role in raising Mary alongside of Catherine. There were times when Catherine was busy appeasing Henry, helping rule the country, or governing as Regent while Henry was away. So it was not a surprise that you would look after Mary when her parents were unable to…which was a lot. 
+
+You nurse Mary back to health when she is ill, wipe her tears, clean up scraped knees, and teach her about Science. You love her as if she was your own. When you see Henry shove Mary out of his way to get to his son, you feel a vengeful fire lighting inside of you. 
+
+How dare he continue to neglect his daughter when it causes her so much pain? You want to make him suffer the way he makes Mary suffer. 
+
+You think of a plan to get rid of the person Henry loves the most in the world, his son. 
+
+Is killing a child kind of psychotic? Sure. Does little Henry FitzRoy deserve it? No, not really. However, will you still be planning his return to the creator? Yes, absolutely. 
+
+Since Henry is a child, you decide to kill him in the most painless and discreet way possible. You add the toxic vervain plant into his nightly tea. This will slow down his heart rate and breathing to a complete full stop where he is no longer breathing, nor is his heart beating. ]
+
+(text-colour:#ffc078)[[Next On Tudor History]]
+
+&lt;a href=&quot;https://imgflip.com/i/85qasl&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/85qasl.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;
+
+
+</tw-passagedata><tw-passagedata pid="58" name="Your Lapdog Is Now Mine" tags="" position="4150,1525" size="100,100">(text-colour:#c92a2a)[Thomas Wolsey is a Catholic Bishop and one of the King’s most trusted advisors. Henry relies on Thomas greatly, so much so that you are not entirely sure if the King can be victorious without him. However, let’s not get it twisted Henry still holds all the power, so if Henry says, “Jump,” Thomas will be jumping. 
+
+Neither you nor the Queen are fond of Thomas Wolsey as he continuously contradicts Catherine&#39;s ideas, claiming that she is a woman and needs to keep her mouth shut. Henry used to trust Catherine’s input when it came to ruling as he left her as Regent when he went to France. Now that Thomas is in the picture, Henry no longer cares for Catherine’s suggestions, which could be beneficial for England. 
+
+Henry is creating a treaty with the Italians when Catherine proposes a clause that would grant England a profit should anything go amuck. Thomas shuts her down instantly and has the King order Catherine to leave immediately. 
+
+Fuming, Catherine storms out of the council chambers and goes to find you. The Queen and you discuss how to either get rid of Thomas or use him to the Queen’s benefit. You promise the Queen that you will do what you must to make him beg for mercy. 
+
+As a lady-in-waiting, you are able to leave the castle walls and roam through the city, however, not without protection. You must complete this mission alone, so you leave in the dead of night through your window and smuggle yourself out the gates and through the bushes. 
+
+You walk outside the city, where Thomas Wolsey’s church is located, to snoop for any evidence that may cause the King to hate him or to make him submit to your will. 
+
+Once you reach the church, you hear whispers coming from within the catacombs. You are skilled in moving about quietly in dark and echoey places. In the dim torchlight, you are able to make out Thomas’ figure. You hear two manly voices arguing over having to hide in public and not telling the King about Thomas’ biggest secret. Thomas refers to the other man who is with him as darling. Signaling to you that he prefers the company of the same sex. As you walk further in, you see Thomas kiss the other man. Before you think, you let out a gasp. Thomas turns and sees you. He is yelling and running after you, but you are too fast. You run back to the palace and find Catherine. You tell her what you have discovered, and she quickly determines a plan. ]
+
+(text-colour:#ffc078)[[He Would Kill You If He Knew]]
+
+
+
+
+
+</tw-passagedata><tw-passagedata pid="59" name="Next On Tudor History" tags="" position="3850,1725" size="100,100">(text-colour:#c92a2a)[The following day, little Henry’s nurses go to wake him up, but he is ice cold, and his skin is gray. The nurses yell to call the King and get a physician. 
+
+The doctor confirms that the King’s son is dead. Henry is beyond himself. He has not shown one spec of emotion when it comes to Mary. However, he is wailing over his son’s dead body.
+
+Catherine of Aragon rushes to her husband’s side to console him. Catherine calls for Mary. However, you stop Catherine as the image of her dead brother may traumatize her. Agreeing, the Queen lets it go, but not without giving you a look that tells you she is aware of your previous night’s endeavors. 
+
+Later on, Catherine whispers-yells at you, asking, “How could you do this?” You feel no remorse as that boy’s existence troubled both Catherine and Mary. You tell her, “Henry was going to name Henry FitzRoy as the heir to the throne. Now I have secured it for Mary.”
+
+In the coming days, the King is beside himself and unable to be consoled. He lays in his son’s bed, remembering his laugh, smile, and all the time they spent together.
+
+ The King is unaware of how he is supposed to move on or even rule England when he is this heartbroken. For the time being, Henry appoints Catherine as Regent indefinitely. 
+
+King Henry never recovered from the loss of his son. However, Catherine and Mary both govern England well, with you by their side. ]</tw-passagedata><tw-passagedata pid="60" name="He Would Kill You If He Knew" tags="" position="4150,1675" size="100,100">(text-colour:#c92a2a)[Catherine chooses to confront Thomas. The Queen invites Thomas into her library and tells him that she is aware of his male lover. He is quick to deny, but she makes it abundantly clear that she believes you and not him. Catherine explains to Thomas– nothing that he does not already know– that if the King were to find out, he would have him executed. 
+
+Catherine chooses to be merciful. She informs Thomas that he must comply with whatever you and her say. Otherwise, she will go straight to Henry. Thomas, being the overly confident man he is, explains to the Queen that Henry does not care for her opinion or what she may have to say. You step in and threaten to kill his beloved if he does not obey. This shuts him up immediately as the reality of losing the one he loves sets in. The change in his demeanor gives you the confirmation that he will be complying. 
+
+&lt;a href=&quot;https://imgflip.com/i/85qepx&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/85qepx.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;
+
+It begins with Thomas slowly stopping the constant criticism of Catherine. He then occasionally supports Catherine’s ideas, encouraging Henry to agree with the Queen’s opinions. 
+
+After a while, Thomas goes to the other members of the council and makes positive remarks about the Queen. He later starts insinuating how Catherine would be a far better ruler than the King. He makes this implication a few times to see which councilmen would support the reign of Queen Catherine. In the beginning, Thomas gets a few sideway glances that have the look of “Uh, that’s treason.” However, as Henry’s temper gets out of hand, starts to make plans to leave the Catholic Church; the constant execution of people who disagree with him, the other members realize that Thomas may be right after all. 
+
+Councilmen approach Thomas about what Catherine may be like as the leader of England instead of Henry. What kind of policies would she agree to regarding taxes, the military, and the poor? The men like what they hear, which is how you wind up planning a discrete dinner party in a tavern far from the castle. 
+
+The members, Catherine and you, discuss how to dethrone the King. Everyone agrees that Catherine will request a small military group from Spain, and the men will gather others who are in the English military who will support Catherine as Queen. 
+
+A month later, the Queen’s supporters gathered inside the tunnels connecting the palace&#39;s old parts to the new ones.
+
+The councilmen and army that support Catherine barge into the King’s library. They arrest him for his crimes and lock him in a tower, deciding whether or not he should be killed. 
+
+It is decided that Henry will be sent to a rancid castle with very few servants and luxuries. Thomas and Catherine will be the ones who take him, so he goes to sleep every night, knowing who he lost to. 
+
+At the castle, he was sedated most of the time, so he was unable to fight back. 
+
+Catherine seizes control of England and becomes one of the best sovereigns to go down in history. ]
+
+&lt;a href=&quot;https://imgflip.com/i/85qd9g&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/85qd9g.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="You Have the Queen&#39;s Trust" tags="" position="4675,275" size="100,100">(text-colour:#4c6ef5)[One day while you are running an errand, Sir Thomas Culpepper hands you a letter and asks you to deliver it to the Queen. Culpepper states that it is an important letter from the King and that you shouldn&#39;t open the letter. As an obedient maid, you take the letter to Catherine Howard. The Queen opens the letter and begins to cry. She tells you that she is in love with Thomas Culpepper but she feels conflicted. 
+
+What do you do?]
+
+(text-colour:#4dabf7)[[Try to put some common sense back in her]] 
+
+(text-colour:#4dabf7)[[Don&#39;t say anything and be an obedient maid]]
+</tw-passagedata><tw-passagedata pid="62" name="Try to put some common sense back in her" tags="" position="4525,400" size="100,100">(text-colour:#4c6ef5)[You protest Catherine&#39;s infidelity and the Queen is now angry. &#39;&#39;How dare you&#39;&#39; command the Queen and give her advice. She only wants you to listen, not talk back.]
+
+(after:5s)+(text-color:#4c6ef5)[By the next morning, you have been replaced and then sent to prison for talking back to the Queen.] </tw-passagedata><tw-passagedata pid="63" name="Don&#39;t say anything and be an obedient maid" tags="" position="4800,400" size="100,100">(text-colour:#4c6ef5)[She confides in you and tells you about how she is in love with Thomas Culpepper. She wants you to help her out with her affair. You know it&#39;s wrong and you understand that it is not the right thing to do. 
+
+Are you loyal to the Queen or do you want to be an obedient royal maid? 
+
+What do you do?]
+
+(text-colour:#4dabf7)[[Help her out]] 
+
+(text-colour:#4dabf7)[[Go and snitch to the King]] 
+</tw-passagedata><tw-passagedata pid="64" name="Help her out" tags="" position="4700,525" size="100,100">(text-colour:#4c6ef5)[You decide to help out the Queen and keep her affair secret. She then asks you to figure out a safe passage from her chambers to Sir Thomas Culpepper. 
+
+Later, you talk with a couple of royal guards to figure out the best route to his chambers. However, you have to be discreet so Queen Catherine Howard doesn&#39;t get caught.  Above all, you do not want to risk the safety of the Queen.  In order to gain a guard&#39;s loyalty, you plan to seduce one of the guards.] 
+
+(text-colour:#4dabf7)[[Seduce the guards]]
+</tw-passagedata><tw-passagedata pid="65" name="Go and snitch to the King" tags="" position="4925,525" size="100,100">(text-colour:#4c6ef5)[King Henry gets extremely angry when he finds out about the affair. He orders the death sentence of both Catherine Howard and Sir Thomas Culpepper. Henry VIII also ordered the assassination of you, Isabelle Smith, because he wanted to keep the matter a secret.]</tw-passagedata><tw-passagedata pid="66" name="Seduce the guards" tags="" position="4800,650" size="100,100">(text-colour:#4c6ef5)[You meet a guard named Ronald and he is a very tall, handsome, and well-mannered guard.  His one weakness is that he&#39;s extremely gullible, so you realize that he is the perfect person to seduce.  Thankfully, Ronald is extremely nice and sweet.  More importantly, he is on night duty outside the Queen&#39;s chambers. 
+
+You go and talk to him and slowly start to befriend him. Every night, you go out of your way to converse with him. You can tell that he is slowly falling in love with you.  As time passes, you both start meeting everyday inside and outside the castle. He is an immensely nice and naive person, caring about you deeply.  As time passes, you realize that you are slowly falling in love with him.
+
+Nonetheless, his naive personality makes him very innocent and you know that it could put his life in danger. You understand the danger with what you are doing and are conflicted to get him involved. If the Queen gets caught, he will also get hanged for treason and neglecting his guard duty. 
+
+What do you do?]
+
+(text-colour:#4dabf7)[[Option A]] 
+
+(text-colour:#4dabf7)[[Option B]] </tw-passagedata><tw-passagedata pid="67" name="Option A" tags="" position="4700,775" size="100,100">(text-colour:#4c6ef5)[You tell him the full truth. You explain to him how the Queen is in love with Sir Thomas Culpepper and if you don&#39;t find a way for them to meet at night you will get in trouble. You tell him about their affair and how you need to find the best possible way for them to meet. Ronald at first is shocked but because he loves you he decides to help you out and tells you about this empty chamber that is right by Sir Thomas&#39;s chamber. He also knows the perfect way to get there and tells you about it. But Sir Thomas’s chamber is right next to the King&#39;s chambers. So the plan is extremely risky. 
+
+What do you do?]
+
+(text-colour:#4dabf7)[[Tell the Queen about the plan]] 
+
+(text-colour:#4dabf7)[[Try to come up with another idea]] </tw-passagedata><tw-passagedata pid="68" name="Option B" tags="" position="4975,750" size="100,100">(text-colour:#4c6ef5)[You tell him the full truth. You explain to him how the Queen is in love with Sir Thomas Culpepper and if you don&#39;t find a way for them to meet at night you will get in trouble. You tell him about their affair and how you need to find the best possible way for them to meet. Ronald at first is shocked but he decides to choose his duty over his love. He feels used but in the moment lies and tells you that he will help.]
+
+(text-colour:#4dabf7)[[Continue]]</tw-passagedata><tw-passagedata pid="69" name="Continue" tags="" position="5025,900" size="100,100">(text-colour:#4c6ef5)[Next morning the guards surround your room. They have also arrested the Queen and Sir Thomas. The King questions and tortures you and you have no choice but to confess. You confess and all three of you are hanged. Ronald can&#39;t handle what he did. The guilt overpowers him so he jumps off the castle wall and ends his life.] </tw-passagedata><tw-passagedata pid="70" name="Tell the Queen about the plan" tags="" position="4775,900" size="100,100">(text-colour:#4c6ef5)[You tell the Queen about the plan and because she trusts you, she completely agrees with it. She tells you to deliver the letters to Sir Thomas about the plan. 
+
+You deliver the message to him and he agrees with the plan. Every night, you and Ronald help the Queen make her way to the secret chamber next to Sir Thomas. You stand outside with Ronald to watch over as the Queen carries on her business inside. Months go by and nothing has gone wrong. 
+
+But you find out that the King has invited the Queen to the summer trip. The Queen decides to go due to the fact that Sir Thomas is also going. At the palace, the Queen asks you to find a way so she could meet with Sir Thomas.]
+
+(text-colour:#4dabf7)[[Option 1]] 
+
+(text-colour:#4dabf7)[[Option 2]] 
+</tw-passagedata><tw-passagedata pid="71" name="Try to come up with another idea" tags="" position="4575,900" size="100,100">(text-colour:#4c6ef5)[You try to come up with another plan, but it&#39;s too late. The Queen is angry and to hide it, she gets you executed.] </tw-passagedata><tw-passagedata pid="72" name="Option 1" tags="" position="4675,1025" size="100,100">(text-colour:#4c6ef5)[You and Ronald figure out a way for them to meet with each other at night. But you have to make sure she doesn&#39;t get caught. Ronald suggests that the Queen should wear his armor as a disguise. You also plan that if someone questions you, you tell them that Sir Thomas has invited you to his tent and the guard is watching over you. You successfully sneak the Queen into the tent but you catch that someone has seen the Queen. Ronald and you go and catch that person and bribe him a lot of money so he doesn&#39;t tell anyone. After the trip you all come back and the Queen asks you to deliver a couple of letters to Sir Thomas.] 
+
+(text-colour:#4dabf7)[[Deliver the letter]]</tw-passagedata><tw-passagedata pid="73" name="Option 2" tags="" position="4900,1025" size="100,100">(text-colour:#4c6ef5)[You try to figure out a way, but get caught while trying to sneak the Queen in. The King finds out and executes all 4 of you at the spot as punishment.] </tw-passagedata><tw-passagedata pid="74" name="Deliver the letter" tags="" position="4800,1150" size="100,100">(text-colour:#4c6ef5)[While delivering the letters, one of the letters falls out. You don&#39;t notice and go deliver the rest of the letters. One of the guards reads the letter and realizes it&#39;s a love letter from the Queen to someone else. He takes the letter and gives it to the King.  Upon finding out, King Henry VIII is furious and orders the capture of the Queen and Sir Thomas. 
+
+(after:5s)[Ronald, who is on guard duty finds out and comes to your aid and tells you to flee with him. You know that if you don&#39;t go, the King will execute all 4 of you. 
+
+What do you do? ]]
+
+(after:5s)[ (text-colour:#4dabf7)[[Run away]] 
+
+(text-colour:#4dabf7)[[Stay]] ] 
+</tw-passagedata><tw-passagedata pid="75" name="Run away" tags="" position="4675,1275" size="100,100">(text-colour:#4c6ef5)[You decide to run away with Ronald. He escapes the castle but you feel guilty and decide to go back. You help the Queen escape as well and all 3 of you run away from the castle. Sir Thomas is caught and he is executed.  King Henry then orders a search for all of you. You all decide to run away to Scotland as you expect it to be a safe place for all of you to lay low. The King, in his anger, executes your family, and also executes Catherine&#39;s family so they cant help you out.] 
+
+(text-colour:#4dabf7)[[The End?]]</tw-passagedata><tw-passagedata pid="76" name="Stay" tags="" position="4925,1275" size="100,100">(text-colour:#4c6ef5)[You decide to stay and all 4 are tried for treason and adultery. The witness who you bribed testifies against you and the love letter seals the deal. Catherine breaks during the investigation and tells the truth in front of everyone. You all are sentenced to death, and at a young age the Queen, Ronald, and you have been executed.] </tw-passagedata><tw-passagedata pid="77" name="The End?" tags="" position="4800,1400" size="100,100">(text-colour:#4c6ef5)[You have survived the game but at what cost. Your family is executed, and lovers&#39; families are executed, and the Queens family as well. It&#39;s a tragic end to a tragic story.] </tw-passagedata><tw-passagedata pid="78" name="Mary Beddington" tags="" position="350,100" size="100,100">(text-colour:#66d9e8)[You are Mary Beddington, the housekeeper for Queen Jane Seymour who is married to King Henry VIII. You began working for Queen Jane Seymour after Queen Anne Boleyn passed away. Up until this point, working for Queen Jane Seymour has been very great. The sovereign did not ask an excessive number of hard errands and everything was truly chill. As of late today, you figured out Queen Jane Seymour is pregnant and King Henry VIIII appears to be truly invigorated yet additionally anxious.]
+(after:4s)[
+(text-colour:#c5f6fa)[[Continue|Continue2]]
 ]
-[[Agree that you shouldn’t try]]
-
-[[Try for a son]]
-</tw-passagedata><tw-passagedata pid="11" name="Agree that you shouldn’t try" tags="" position="1050,775" size="100,100">(text-colour:#d9480f)[You decide not to try for a son, perhaps that was for the best.  As the months roll on and Henry VIII focuses on politics, you try to find other ways to endear yourself to him.  What do you think would make him change his mind? ]
-
-[[Commission a new painting to make you look even better]]
-
-[[Show Henry that you are cultured]] 
-</tw-passagedata><tw-passagedata pid="12" name="Try for a son" tags="" position="850,925" size="100,100">(text-colour:#d9480f)[You try for a son and things don’t go well to say the least.  (text-style:&quot;italic&quot;,&quot;underline&quot;)[Neither of you want anything to do with one another. ] Do you quit while you are ahead or try yet again even though Henry doesn’t like that idea.]
-
-[[Try again]]
-
-[[Agree that you shouldn’t try]] 
-</tw-passagedata><tw-passagedata pid="13" name="Commission a new painting to make you look even better" tags="" position="1200,900" size="100,100">(text-colour:#d9480f)[You get Thomas Cromwell to commission another portrait.  It doesn’t work.  Henry VIII is still disgusted by you and Cromwell will certainly be put to death for this whole agreement.  Henry feels duped; he wanted a wife, not a horse as he puts it.  Are there any other ways to pass your time?]
-
-[[Show Henry that you are cultured]] 
-
-or
-
-[[Give the new portrait a name, maybe that will help]]
-
-&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/4d/Anne_of_Cleves_by_Hans_Holbein_the_Younger%2C_c._1540s%3F.jpg&quot; alt=&quot;&quot; width=&quot;390&quot;&gt;
-</tw-passagedata><tw-passagedata pid="14" name="Try again" tags="" position="1050,1025" size="100,100">(text-colour:#d9480f)[You try for a son again and somehow &#39;&#39;things work out&#39;&#39;.  You are slightly elevated in Henry’s view for the next few months as he expects that he will have another son.
-
-What should you name your child?]  
-
-(dropdown:bind $name, &quot;Henry (the obvious choice)&quot; , &quot;Edward II&quot; , &quot;William&quot; , &quot;Thomas&quot;)
-
-[[Congratulations!]]
 
 
 
-</tw-passagedata><tw-passagedata pid="15" name="Give up on flattering Henry and wait it out" tags="" position="1325,675" size="100,100">(text-colour:#d9480f)[You and Henry get along //relatively well// but your martial status feels stagnant.  By July of 1540, foreign affairs have changed and Henry VIII no longer has use for you.  It has been a long five months since January and you have been trying to make things work from trying for another son to charming Henry with your few talents.  Henry VIII decides to divorce you based on the grounds that your marriage is non-consummated.  Do you decide to divorce amicably or get mad about it?]
+&lt;a href=&quot;https://imgflip.com/i/86fewo&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/86fewo.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="Milly Billeigh" tags="" position="3000,325" size="100,100">(text-colour:orange)[In the opulent halls of Sudeley Castle, you are a silent observer to a captivating exchange between Catherine Parr, the sixth and final wife of King Henry VIII, and her husband.  You are Milly Billeigh, a dedicated maid in Catherine Parr&#39;s service. The air is infused with the calming fragrance of lavender, and the flickering candlelight dances on the ornate tapestries that adorn the walls.]
 
-[[Divorce amicably]]
-
-[[Express your frustration]]  
-</tw-passagedata><tw-passagedata pid="16" name="Divorce amicably" tags="" position="1525,675" size="100,100">(text-colour:#d9480f)[You divorce from Henry VIII amicably in July of 1540.  Although you didn’t find each other attractive, he appreciated your mild manner and gentle nature.  Relieved that the treaty is no longer relevant, Henry gives you a generous fortune in addition to some land where you can live for the rest of your life.  As Henry VIII marries Catherine Howard, and then beheads her.  You are fortunate to meet such a good fate.  As Henry’s political and personal problems continue, you stay in touch from time to time with friendly respect for one another.  You also hear that Thomas Cromwell finally got executed due to his follies, especially for duping Henry into marrying you.  Better Cromwell than you. ]&#39;&#39;(text-colour:#e67700)[ The End!  ]&#39;&#39;
+(text-colour:#ffc078)[[Next]]
 
 
-The name of your estate is....
-(dropdown:bind $name3, &quot;Wealden Hall House&quot; , &quot;The Lewes Estate&quot; , &quot;Where the Anne that Survived Lives&quot;)
+&lt;a href=&quot;https://imgflip.com/i/861khw&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/861khw.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="80" name="Next" tags="" position="2775,425" size="100,100">(text-colour:orange)[Catherine, regally attired in a gown befitting her royal stature, moves with an air of grace that commands attention.  You, a diligent and quick-witted maid, follow closely.  You are always attending to the queen&#39;s needs. It is evident that Catherine values Milly not only for her service but also for the lively spirit she brings to their interactions.]
+
+(text-colour:#ffc078)[[Follow Catherine down the hall]]
+</tw-passagedata><tw-passagedata pid="81" name="Follow Catherine down the hall" tags="" position="2900,550" size="100,100">(text-colour:orange)[With a warm smile, Catherine instructs you, &quot;Fetch me the letters from my study, my dear. I am eager to learn of the news that has reached us today.&quot; Catherine watches her departure with a fondness that transcends the conventional mistress-servant relationship.]
+
+(text-colour:#ffc078)[[Catherine waits for you to return]]
+
+(text-colour:orange)[You neglect your duties and] (text-colour:#ffc078)[[wander off]]
 
 
-&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/9/98/Anne_of_Cleves_House%2C_Southover_01.jpg&quot; alt=&quot;&quot; width=&quot;390&quot;&gt;
+&lt;a href=&quot;https://imgflip.com/i/861kt4&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/861kt4.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="Catherine waits for you to return" tags="" position="2775,675" size="100,100">(text-colour:orange)[While Milly is away, Catherine turns her attention to a tapestry depicting a royal hunting scene. Her fingers delicately trace the intricate threads. This moment serves as a reminder that Catherine Parr, beyond her role as queen, was a formidable scholar and author.  She contributed to the literary world with works such as &quot;Prayers or Meditations.&quot;]
 
-(after:7s)[//(A House Given to Anne of Cleves by Henry VIII in modern Lewes, England)//]</tw-passagedata><tw-passagedata pid="17" name="Express your frustration" tags="" position="1375,825" size="100,100">(text-colour:#d9480f)[You express frustration that you endured approximately seven months with Henry VIII and he just discarded you.  Even though you realize the treaty was an important political decision, you are still upset.  You question Henry about a potential mistress, Catherine Howard, and he angerly objects to it.  Once you divorce, you go your separate ways bitterly.  You are not beheaded, but you are left with no fortune or parting gift.
+(text-colour:orange)[Wait to see if ](text-colour:#ffc078)[[Milly has returned]] (text-colour:orange)[with her letters]
 
-(after:7s)[You find out later Catherine Howard was indeed having an affair with him.]]&#39;&#39;&#39;&#39;
+(text-colour:orange)[Catherine] (text-colour:#ffc078)[[searches for you]] (text-colour:orange)[ouside the castle ]
 
-(after:13s)[Do you still need vindication?  [[Yes]] or [[No]] ]
+&lt;a href=&quot;https://imgflip.com/i/861kbs&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/861kbs.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="wander off" tags="" position="3025,675" size="100,100">(text-colour:orange)[While searching for the letters, you get lost and are executed by suspicious mercenaries. ]
 
-</tw-passagedata><tw-passagedata pid="18" name="Congratulations!" tags="" position="1050,1150" size="100,100">Things seem to be going good for you, but...
+&lt;a href=&quot;https://imgflip.com/i/861kz5&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/861kz5.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="Milly has returned" tags="" position="2650,800" size="100,100">(text-colour:orange)[Upon waiting patiently for Milly&#39;s return with the letters, Catherine scans the parchments, her expression a mix of concern and curiosity. 
 
-(after:3s)[In July you have a miscarriage and that immensely concerns Henry VIII. Poor $name]  
+Upon returning to Catherine Parr, you sense your mistress&#39; unease.   You venture to ask, &quot;Is there troubling news, Your Grace?&quot; Catherine looks up, revealing a blend of weariness and resilience that defined her tenure as queen.
+]
+(text-colour:#ffc078)[[See what Catherine has to say in response]]
 
-(after:6s)[Simultaneously, diplomatic circumstances have changed and your marriage is no longer relevant to political strategy. ]
+(text-colour:#ffc078)[[Venture to discover new historical aspects of the castle]]
+</tw-passagedata><tw-passagedata pid="85" name="searches for you" tags="" position="2900,800" size="100,100">(text-colour:orange)[While Catherine searches outside of the castle for you, you are in a difficult situation.  You have come across a hooded figure who says they know who is looking for you. You are surrounded by numerous people who bear arms. You are captured and killed by your enemies]. </tw-passagedata><tw-passagedata pid="86" name="See what Catherine has to say in response" tags="" position="2575,925" size="100,100">(text-colour:orange)[With a composed demeanor, Catherine replies, &quot;Politics, my dear, is a dance of ambition and power. But we must navigate it with grace and intelligence.&quot; You nod, absorbing the wisdom shared by the queen.  Catherine Parr, as historical records highlight, displayed remarkable intellect and diplomatic finesse during her regency when Henry VIII was away at war.]
 
-(after:9s)[//Due to these two colliding factors, Henry VIII has you beheaded.//  There goes wife IV.   ]</tw-passagedata><tw-passagedata pid="19" name="Give the new portrait a name, maybe that will help" tags="" position="1325,1100" size="100,100">What is your new painting from Holbein titled?
+(text-colour:#ffc078)[[See what else Catherine says]]
+</tw-passagedata><tw-passagedata pid="87" name="Venture to discover new historical aspects of the castle" tags="" position="2775,925" size="100,100">(text-colour:orange)[&#39;&#39;You shouldn’t venture off in the middle of a story! &#39;&#39;]</tw-passagedata><tw-passagedata pid="88" name="See what else Catherine says" tags="" position="2650,1050" size="100,100">(text-colour:orange)[As Catherine rises from her seat, the rustle of her silk gown fills the room. &quot;Milly, I appreciate your presence. You bring a certain lightness to these somber halls,&quot; Catherine says.  You smile, grateful for the queen&#39;s acknowledgment as she was known to be kind when she governed. ]
 
-(dropdown:bind $name2, &quot;Anne the beautiful&quot; , &quot;Anne the intelligent&quot; , &quot;Anne the strong&quot; , &quot;Anne the docile&quot;)
+(text-colour:#ffc078)[[Hear what Catherine has learned from Thomas Seymour]]
+</tw-passagedata><tw-passagedata pid="89" name="Hear what Catherine has learned from Thomas Seymour" tags="" position="2875,1175" size="100,100">(text-colour:orange)[Later, Catherine Parr and Thomas Seymour stroll through the castle&#39;s gardens and you catch fragments of their conversation. Catherine imparts knowledge about the medicinal properties of herbs, a subject she explored during her marriage to Thomas Seymour.  You listen attentively, absorbing the queen&#39;s words like a sponge.]
 
-[[Tell Henry what you&#39;ve named it]]
+(text-colour:#ffc078)[[Continue to the bed of roses to see what Catherine Parr does next]]
 
-&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/4d/Anne_of_Cleves_by_Hans_Holbein_the_Younger%2C_c._1540s%3F.jpg&quot; alt=&quot;&quot; width=&quot;390&quot;&gt;
+&lt;a href=&quot;https://imgflip.com/i/861l5t&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/861l5t.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="20" name="Tell Henry what you&#39;ve named it" tags="" position="1325,1225" size="100,100">Henry VIII does not agree with $name2.  He just doesn&#39;t see that in you.
 
-Maybe try to [[Show Henry that you are cultured]] ?</tw-passagedata><tw-passagedata pid="21" name="Attempt to escape" tags="" position="625,1025" size="100,100">(text-colour:#d9480f)[You attempt to flee but you are caught anyway.]
+</tw-passagedata><tw-passagedata pid="90" name="Continue to the bed of roses to see what Catherine Parr does next" tags="" position="2625,1225" size="100,100">(text-colour:orange)[Catherine pauses by a bed of roses, her favorite flowers. She plucks one and hands it to you.  &quot;A symbol of friendship, my dear. In this court, where alliances are fragile, true friendship is a rare treasure.&quot; You cradle the rose delicately, understanding the profound nature of the queen&#39;s words.]
 
-(after:3s)[You are charged for treason with some additional unjustified counts of adultery.]
+(text-colour:#ffc078)[[You accept this gift]] 
 
-(after:6s)[You are beheaded in addition to two other young men who are randomly accused.]</tw-passagedata><tw-passagedata pid="22" name="Yes" tags="" position="1575,1000" size="100,100">You ask for some financial compensation, specifically (dropdown:bind $name5, &quot;An estate and a small fortune&quot; , &quot;An estate&quot; , &quot;A small fortune&quot; , &quot;A large patch of land&quot;)
+(text-colour:#ffc078)[[You are ungrateful for this gift]]
+</tw-passagedata><tw-passagedata pid="91" name="You accept this gift" tags="" position="2675,1400" size="100,100">(text-colour:orange)[Milly politely thanks the queen once more before they begin to approach the chapel. Catherine&#39;s gaze suddenly turns contemplative. &quot;In matters of faith, one must seek understanding and tolerance. I have navigated the path of both Protestant and Catholic beliefs, striving for unity in this realm,&quot; she reflects. This moment echoes Catherine Parr&#39;s historical significance as a queen who pursued religious harmony during a turbulent period in England.]
 
-[[Ask Henry]]</tw-passagedata><tw-passagedata pid="23" name="No" tags="" position="1600,850" size="100,100">You decide to let it go.  At least you survived being married to Henry VIII.</tw-passagedata><tw-passagedata pid="24" name="Ask Henry" tags="" position="1575,1125" size="100,100">Henry VIII denies granting you $name5.  You are left with nothing but yourself.</tw-passagedata></tw-storydata>
+(text-colour:orange)[Continue and wait to] (text-colour:#ffc078)[[see who is approaching]]
+
+(text-colour:#ffc078)[[Catherine Parr and you leave]] 
+</tw-passagedata><tw-passagedata pid="92" name="You are ungrateful for this gift" tags="" position="3000,1375" size="100,100">(text-colour:orange)[Milly then puts the rose on the ground and says that she is only doing this for her because she is a maid and has no choice. Milly is then captured and executed publicly to the people.]</tw-passagedata><tw-passagedata pid="93" name="see who is approaching" tags="" position="2800,1525" size="100,100">(text-colour:orange)[Their conversation is momentarily interrupted by footsteps, and a courtier approaches with urgent news. Catherine&#39;s expression shifts, revealing a blend of duty and determination. You, attuned to the queen&#39;s resolve, prepare yourself for whatever lies ahead.
+]
+
+(text-colour:#ffc078)[[Hear what Catherine Parr has to address]]
+</tw-passagedata><tw-passagedata pid="94" name="Catherine Parr and you leave" tags="" position="3050,1550" size="100,100">(text-colour:orange)[Since Catherine Parr and Milly leave to enjoy parts of the kingdom ….. Before being ambushed by a gang of mercenaries as the people approaching could have protected them. ]
+
+&lt;a href=&quot;https://imgflip.com/i/861kz5&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/861kz5.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="95" name="Hear what Catherine Parr has to address" tags="" position="2775,1700" size="100,100">(text-colour:orange)[Receiving news that she is needed in the throne room, Catherine Parr goes there with guards to address the court with eloquence and authority, delving into matters of state. You stand discreetly by her side, a silent witness to history unfolding. The queen&#39;s adept handling of court politics becomes evident as she navigates the conversation with grace and intelligence.]
+
+(text-colour:#ffc078)[[Continue to see the end of the court]]
+</tw-passagedata><tw-passagedata pid="96" name="Continue to see the end of the court" tags="" position="3025,1750" size="100,100">(text-colour:orange)[As the court disperses, you linger in the background, marveling at the strength and resilience of her queen. Catherine turns to her, &quot;Milly, my dear, the tapestry of life is woven with both joy and sorrow. But through it all, we must face each thread with courage and grace.&quot; You nod with your admiration for Catherine Parr deepening.
+]
+
+(text-colour:#ffc078)[[Continue to the end]]
+</tw-passagedata><tw-passagedata pid="97" name="Continue to the end" tags="" position="2775,1875" size="100,100">(text-colour:orange)[As the day concludes, you reflect on the profound bond between Catherine Parr and you. The queen&#39;s wisdom and kindness, coupled with her significant contributions as a scholar and author, have left a mark on the young maid Milly. As you part ways for the evening, you sense that the echoes of this historical encounter, enriched with facts about Catherine Parr&#39;s life, //will resonate through the corridors of Sudeley Castle for years to come//.]
+
+&lt;a href=&quot;https://imgflip.com/i/861lel&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/861lel.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="98" name="Continue2" tags="" position="350,225" size="100,100">(text-colour:#66d9e8)[Ruler Henry VIIII is anxious on the grounds that such long ways with his different spouses they couldn&#39;t furnish him with a son. Lord Henry truly needs a son and Queen Jane Seymour guaranteed Henry she will give him a son. Henry is apprehensive yet in addition happy in light of the fact that there is an opportunity his sovereign could stay true to her obligation. Sometime in the afternoon, there is a major gala occurring in the lounge area. The queen inquired as to whether you can help around for the gala?]
+
+(after:3s)[
+
+(text-colour:#c5f6fa)[[Yes|Yes2]]
+
+(text-colour:#c5f6fa)[[No|No2]]
+
+]
+</tw-passagedata><tw-passagedata pid="99" name="No2" tags="" position="150,350" size="100,100">(text-colour:#66d9e8)[You let the Queen know that you can&#39;t help. The Queen ganders at you with revulsion and throws you out from the palace. Presently, you have no place to go and it&#39;s getting dull. You chose to rest in the middle of nowhere and  while you were sleeping the criminals appeared, burglarized you and killed you simultaneously. ]</tw-passagedata><tw-passagedata pid="100" name="Yes2" tags="" position="550,325" size="100,100">(text-colour:#66d9e8)[You let the queen know that you couldn&#39;t imagine anything better than to help. The queen tells you, &quot;much obliged&quot; and goes to her room to get changed. You began going down to the lounge area and setting up the table, cleaning, cooking, and doing the dishes with different servants. After you finish the visitor fires appear and you see King Henry and Queen Jane descending the steps. Everybody is applauding and you began serving the King, Queen, and the other visitor.]
+
+(after:3s)[
+
+(text-colour:#c5f6fa)[[Continue|Continue3]]
+
+]</tw-passagedata><tw-passagedata pid="101" name="Continue3" tags="" position="550,500" size="100,100">(text-colour:#66d9e8)[The dinner was a triumph and you began to tidy up the lounge area. Following a monotonous day&#39;s worth of effort, the queen lets you know that you worked really hard and presently you can proceed to rest. You said thanks to the queen and began strolling to your room. You sit down on your bed and are curious if the child could be a lady or boy? Nobody truly knows until the due date. You chose to quit thoroughly considering an attempt to rest since you need to get up ahead of schedule to set up the table for breakfast.]
+(after:3s)[
+(text-colour:#c5f6fa)[[Skip to 1537]]
+]
+</tw-passagedata><tw-passagedata pid="102" name="Skip to 1537" tags="" position="400,600" size="100,100"> (text-colour:#66d9e8)[The year is October 12, 1537, the child was finally born. It was promptly in the first part of the day in King Henry and Queen Jane&#39;s room, she was at last bringing forth her most memorable kid. The lord looked extremely anxious and expected a boy. At the point when the child at long last came out the King&#39;s eyes illuminated, it was a boy. Everybody in the room was euphoric and the lord couldn&#39;t quit crying. The boy&#39;s name is Prince Edward.]
+ (after:3s)[
+ (text-colour:#c5f6fa)[[Continue|Continue4]]
+ ]</tw-passagedata><tw-passagedata pid="103" name="Continue4" tags="" position="225,525" size="100,100">(text-colour:#66d9e8)[After the introduction of Prince Edward, Queen Jane was becoming truly ill. She was hacking a great deal and had a high fever. She&#39;s sitting down in bed and she inquired as to whether you can deal with Prince Edward until her ailment is no more. You consented to the Queen&#39;s solicitation and began searching for Prince Edward.] 
+(after:3s)[
+(text-colour:#c5f6fa)[[Prince Edward Room]]
+]
+</tw-passagedata><tw-passagedata pid="104" name="Prince Edward Room" tags="" position="100,650" size="100,100">(text-colour:#66d9e8)[You have gone into Prince Edward&#39;s room and at the present moment the child is simply sleeping. You began to tidy up the room a tad and wait for the prince to wake up from sleep. After one hour, the child at last awakened and he began to cry. You began to change his diaper and feed him to make the crying stop. At last, the crying has halted and the child returns to rest. While you were going to leave the room, King Henry appeared. King Henry said &quot;you worked really hard and you can leave now&quot;. You said thank you to the King and left the room. At the point when you were leaving you saw one of the specialists go into the room and it appeared as though they were going to have a serious discussion. Do you….] 
+(after:3s)[
+(text-colour:#c5f6fa)[[Eavesdrop]] 
+
+(text-colour:#c5f6fa)[[Leave]] 
+]
+&lt;a href=&quot;https://imgflip.com/i/86ff2s&quot;&gt;&lt;img src=&quot;https://i.imgflip.com/86ff2s.jpg&quot; title=&quot;made at imgflip.com&quot;/&gt;&lt;/a&gt;&lt;div&gt;&lt;a href=&quot;https://imgflip.com/memegenerator&quot;&gt;from Imgflip Meme Generator&lt;/a&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="105" name="Eavesdrop" tags="" position="100,800" size="100,100">(text-colour:#66d9e8)[You chose to eavesdrop on the discussion between the King and Specialist. While you were tuning in to the preservation, you figured out the specialist doesn&#39;t know whether Queen Jane Seymour would endure her ailment. The fever isn&#39;t going any lower and presently she has begun hurling. In the event that the queen&#39;s disease deteriorates she would have under fourteen days to live. When you hear the news, you begin strolling back to your room so you will not get found out for listening in. You began to feel miserable for Sovereign Jane and chose to serve her until her final breath.]
+(after:3s)[
+(text-colour:#c5f6fa)[[Skip to Day 4]]
+]</tw-passagedata><tw-passagedata pid="106" name="Leave" tags="" position="300,775" size="100,100">(text-colour:#66d9e8)[You chose to not listen in and leave the room. While leaving the room, you were becoming more inquisitive about the ruler and specialist&#39;s discussion. You were unable to beat your interest and chose to return to the room and eavesdrop. You began to pay attention to the discussion, yet all of the unexpected the entryway opened and you just got discovered listening in. King Henry was incensed and rebuffed you. You were sent into a dull jail cell and you don&#39;t know when you would get out.] </tw-passagedata><tw-passagedata pid="107" name="Skip to Day 4" tags="" position="250,925" size="100,100">(text-colour:#66d9e8)[It&#39;s been four days since the introduction of Prince Edward. The King appears to be truly happy that he at long last has a son yet the Queen looks more debilitated. The specialist&#39;s have pre-bought in her with various medications however not a single one of them were working. You made an honest effort to deal with the Queen and make an honest effort with each undertaking the Queen requested that you do. You were trusting that the Queen could recuperate from her disease however she was excessively wiped out and frail.]
+(after:3s)[
+(text-colour:#c5f6fa)[[Skip to Day 8]]
+]</tw-passagedata><tw-passagedata pid="108" name="Skip to Day 8" tags="" position="350,1050" size="100,100">(text-colour:#66d9e8)[It&#39;s been eight days and the Queen hasn&#39;t got any better. The fever was deteriorating and the Queen was losing her recuperation. For eight days the Queen couldn&#39;t eat anything with the exception of soups. Her solidarity was getting more fragile and everything she could do was sit down in bed and attempt to recuperate from her medication. You were making an honest effort to deal with the Queen until her final gasp.]
+(after:3s)[
+(text-colour:#c5f6fa)[[Skip to Day 10]]
+]</tw-passagedata><tw-passagedata pid="109" name="Skip to Day 10" tags="" position="200,1125" size="100,100">(text-colour:#66d9e8)[Today was the last day for Queen Jane Seymour. Promptly in the first part of the day, you just awakened from your rest and there was confusion in the royal residence. You leave your room and different servants let you know that Queen Jane just died. Everybody assembled at the Sovereign&#39;s room and saw trouble in everybody&#39;s eyes. The King appears to be miserable and says thanks to her for keeping the commitment. There was a burial service held that day and everybody said their last farewell to Sovereign Jane Seymour.]
+(after:4s)[
+&#39;&#39;The End&#39;&#39;
+]
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
